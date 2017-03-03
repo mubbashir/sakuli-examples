@@ -17,7 +17,7 @@
  */
 
 _dynamicInclude($includeFolder);
-var testCase = new TestCase(20, 30);
+var testCase = new TestCase(40, 50);
 var env = new Environment();
 var screen = new Region();
 var appCalc = new Application("/usr/bin/gnome-calculator");
@@ -44,18 +44,17 @@ try {
     screen.waitForImage("calculator.png", 5).highlight().mouseMove();
 
     env.type("525");
-    env.sleep(2);
     var calcRegion = appCalc.getRegion();
     calcRegion.find("plus.png").click().type("100");
     calcRegion.find("result.png").click();
     screen.waitForImage("625", 5);
-    testCase.endOfStep("Calculation", 10);
+    testCase.endOfStep("Calculation", 20);
 
     appGedit.open();
     screen.waitForImage("gedit.png", 10);
     env.paste("Initial test passed. Sakuli, Sahi and Sikuli seem to work fine. Exiting...");
-    testCase.endOfStep("Editor", 10);
-    env.sleep(4);
+    testCase.endOfStep("Editor", 15);
+
 } catch (e) {
     testCase.handleException(e);
 } finally {
