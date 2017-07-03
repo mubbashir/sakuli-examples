@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.sakuli</groupId>
-    <artifactId>sakuli-java-dsl</artifactId>
+    <artifactId>java-example</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <!--TODO TS change after release-->
@@ -32,7 +32,7 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>org.sakuli</groupId>
-                                    <artifactId>java-dsl</artifactId>
+                                    <artifactId>sakuli-java-dsl</artifactId>
                                     <version>${sakuli.version}</version>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
@@ -49,14 +49,14 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>java-dsl</artifactId>
+            <artifactId>sakuli-java-dsl</artifactId>
             <version>${sakuli.version}</version>
             <type>jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>java-dsl</artifactId>
+            <artifactId>sakuli-java-dsl</artifactId>
             <version>${sakuli.version}</version>
             <type>test-jar</type>
             <scope>test</scope>
